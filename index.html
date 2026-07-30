@@ -1,43 +1,72 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muadalah Sidogiri | MMU Tarbiyah Idadiyah</title>
-  <link rel="icon" href="iili.io/C8C6Zvf.png" /> <!--- Untuk Ubah Icon Web --->
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #eee;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muadalah Sidogiri | MMU Tarbiyah Idadiyah</title>
 
-    .iframe-container {
-      width: 100%;
-      height: 100dvh;
-      overflow: hidden;
-    }
+    <link rel="icon" href="https://iili.io/C8C6Zvf.png">
 
-    iframe {
-      display: block;
-      width: 100%;
-      height: 100dvh;
-      border: none;
-    }
-  </style>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            width:100vw;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-family:Arial,sans-serif;
+            background:#f5f5f5;
+        }
+
+        .loader{
+            text-align:center;
+        }
+
+        .spinner{
+            width:55px;
+            height:55px;
+            border:6px solid #ddd;
+            border-top:6px solid #0d6efd;
+            border-radius:50%;
+            margin:auto;
+            animation:spin 1s linear infinite;
+        }
+
+        @keyframes spin{
+            to{
+                transform:rotate(360deg);
+            }
+        }
+
+        p{
+            margin-top:20px;
+            color:#555;
+            font-size:18px;
+        }
+    </style>
+
+    <script>
+        const url = "https://script.google.com/macros/s/AKfycbz_NffbrzLdrfT1sjzDc5FEsUxlm-1ki8HvBgXURahnmEWpwRjSOV2B9Ibk9hSqZ_FX/exec";
+
+        setTimeout(()=>{
+            window.location.replace(url);
+        },1000);
+    </script>
+
 </head>
+
 <body>
-  <div class="iframe-container">
-    <iframe
-      id="app"
-     src="https://script.google.com/macros/s/AKfycbz_NffbrzLdrfT1sjzDc5FEsUxlm-1ki8HvBgXURahnmEWpwRjSOV2B9Ibk9hSqZ_FX/exec"
-     scrolling="yes">
-     <!--- src="https://script.google.com/macros/s/AKfycbzDm4ttR2pvebkhOh7tbWicAJYo_MrYBd4IdlZkm2IAAKMQrKRMnUNQo-vSdw7iv5e4/exec"--->
-      <!--- src="https://script.google.com/macros/s/AKfycbyLYEClPrlYAFbdAhoZ1rL1Ust5_716vdzz-UOi6xI7FAGbIAz0hBdaxs2GSUpt8tPe/exec"--->
-      
-    </iframe>
-  </div>
+
+<div class="loader">
+    <div class="spinner"></div>
+    <p>Membuka aplikasi...</p>
+</div>
+
 </body>
 </html>
